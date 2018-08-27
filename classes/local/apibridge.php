@@ -1038,11 +1038,6 @@ class apibridge {
         if ($api->get_http_code() != 204) {
             return false;
         }
-        // Confirm deletion, if video can be found deletion has failed.
-        if ($this->get_already_existing_event([$eventidentifier])) {
-            return false;
-        }
-        // Video is successfully deleted.
         return true;
     }
 }
